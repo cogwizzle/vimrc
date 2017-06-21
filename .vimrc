@@ -33,5 +33,9 @@ let g:airline_theme='base16color'
 
 au BufRead,BufNewFile *.tag set filetype=html
 
+" ============= PHP QA =======================
+let g:phpqa_codesniffer_autorun = 0
+let g:phpqa_messdetector_autorun = 0
+
 " ============= Compatability ================
 set encoding=utf-8
