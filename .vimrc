@@ -11,6 +11,8 @@ set shiftwidth=2
 set expandtab
 set smarttab
 set mouse=
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 " ================ Nerd Tree ==================
 " Start nerd tree
@@ -31,4 +33,5 @@ let g:airline_theme='base16color'
 
 au BufRead,BufNewFile *.tag set filetype=html
 
+" ============= Compatability ================
 set encoding=utf-8
