@@ -44,3 +44,6 @@ hi Comment ctermfg=lightblue
 
 " ============= Custom commands ==============
 command Test execute "!phpunit %"
+
+" ============= Snippets config ==============
+let g:snips_author='1r0nm@n'
