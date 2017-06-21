@@ -4,13 +4,13 @@ execute pathogen#infect()
 
 " =============== My Stuff ====================
 syntax on
-colorscheme torte
 set tabstop=2
 set relativenumber
 set shiftwidth=2
 set expandtab
 set smarttab
 set mouse=
+set background=dark
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
@@ -39,3 +39,8 @@ let g:phpqa_messdetector_autorun = 0
 
 " ============= Compatability ================
 set encoding=utf-8
+set t_Co=256
+hi Comment ctermfg=lightblue
+
+" ============= Custom commands ==============
+command Test execute "!phpunit %"
