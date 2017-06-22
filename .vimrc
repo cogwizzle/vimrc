@@ -13,6 +13,7 @@ set mouse=
 set background=dark
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+:set completeopt-=preview
 
 " ================ Nerd Tree ==================
 " Start nerd tree
