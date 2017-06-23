@@ -47,4 +47,4 @@ hi Comment ctermfg=lightblue
 command Test execute "!phpunit %"
 
 " ============= Snippets config ==============
-let g:snips_author='1r0nm@n'
+let g:snips_author='Joseph Fehrman'
