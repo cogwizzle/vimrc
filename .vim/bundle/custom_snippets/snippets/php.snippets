@@ -1,16 +1,16 @@
 # API documentation
 snippet doc_api
 	/**
-	 * @api ${1}
-	 * @apiName ${2:get}
-	 * @apiGroup ${3:group}
+	 * @api {${1:get}} ${2:/api/1.0/}
+	 * @apiName ${3:get}
+	 * @apiGroup ${4:group}
 	 *
-	 * @apiSuccess ${4:{String}} ${5:ok} ${6:Status of resposne.}
+	 * @apiSuccess ${5:{String}} ${6:ok} ${7:Status of resposne.}
 	 */
 # Class documentation
 snippet doc_class
 	/**
-	 * ${1}
+	 * ${1:Function description.}
 	 * 
 	 * @author ${2:`g:snips_author`}
 	 * @since `strftime('%d %B, %Y')`
@@ -20,7 +20,7 @@ snippet TestCase
 	use PHPUnit\Framework\TestCase;
 
 	/**
-	 * ${3}
+	 * ${3:Test description.}
 	 *
 	 * @author `g:snips_author`
 	 * @since `strftime('%d %B, %Y')`
