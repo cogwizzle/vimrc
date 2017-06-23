@@ -105,7 +105,7 @@ snippet api
 	 */
 	$app->get('$1$2/$3/{$3Id}', function($request, $response){
 	  // TODO Implement read by id endpoint.
-	}
+	});
 
 	/**
 	 * @api {put} $1/$2/$3/:$3Id Update $3 by ID.
@@ -120,7 +120,7 @@ snippet api
 	 */
 	$app->put('$1$2/$3/$3Id', function($request, $response){
 	  // TODO Implement update endpoint.
-	}
+	});
 
 	/**
 	 * @api {delete} $1/$2/$3 Delete all $3s.
@@ -133,7 +133,7 @@ snippet api
 	 */
 	$app->delete('$1/$2/$3', function($request, $response){
 		// TODO Implement delete all endpoint.
-	}
+	});
 
 	/**
 	 * @api {delete} $1/$2/$3/:$3Id Delete $3 by ID.
@@ -148,4 +148,4 @@ snippet api
 	 */
 	$app->delete('$1/$2/$3/$3Id', function($request, $response){
 		// TODO Implement delete by id endpoint.
-	}
+	});
