@@ -7,14 +7,6 @@ snippet doc_api
 	 *
 	 * @apiSuccess ${5:{String}} ${6:ok} ${7:Status of resposne.}
 	 */
-# Class documentation
-snippet doc_class
-	/**
-	 * ${1:Function description.}
-	 * 
-	 * @author ${2:`g:snips_author`}
-	 * @since `strftime('%d %B, %Y')`
-	 */
 # PHPUnit TestCase
 snippet TestCase
 	use PHPUnit\Framework\TestCase;
@@ -75,9 +67,7 @@ snippet api
 	 * @apiSuccess {String} ok Status of response.
 	 * @apiSuccess {Object[]} ok Newly created $3.
 	 */
-	$app->post('${1:/api}/${2:1.0}/${3:lower_case_name}', function($request, $response){
-	  // TODO Implement create endpoint.
-	});
+	$app->post('${1:/api}/${2:1.0}/${3:lower_case_name}', '$4Router:create');
 
 	/**
 	 * @api {get} $1/$2/$3 Get filtered $3.
@@ -88,9 +78,7 @@ snippet api
 	 * @apiSuccess {String} ok Status of response.
 	 * @apiSuccess {Object[]} data Retrieve filtered $3s.
 	 */
-	$app->get('$1/$2/$3', function($request, $response){
-		// TODO Implement read endpoint.
-	});
+	$app->get('$1/$2/$3', '$4Router:read');
 
 	/**
 	 * @api {get} $1/$2/$3/:$3Id Get $3 by ID.
@@ -103,9 +91,7 @@ snippet api
 	 * @apiSuccess {String} ok Status of response.
 	 * @apiSuccess {Object[]} data $4 selected by ID.
 	 */
-	$app->get('$1$2/$3/{$3Id}', function($request, $response){
-	  // TODO Implement read by id endpoint.
-	});
+	$app->get('$1$2/$3/{$3Id}', '$4Router:readOne');
 
 	/**
 	 * @api {put} $1/$2/$3/:$3Id Update $3 by ID.
@@ -118,9 +104,7 @@ snippet api
 	 * @apiSuccess {String} ok Status of response.
 	 * @apiSuccess {Object[]} data Updated $3.
 	 */
-	$app->put('$1$2/$3/$3Id', function($request, $response){
-	  // TODO Implement update endpoint.
-	});
+	$app->put('$1$2/$3/$3Id', '$4Router:update');
 
 	/**
 	 * @api {delete} $1/$2/$3 Delete all $3s.
@@ -131,9 +115,7 @@ snippet api
 	 * @apiSuccess {String} ok Status of response.
 	 * @apiSuccess {Object[]} data Empty object.
 	 */
-	$app->delete('$1/$2/$3', function($request, $response){
-		// TODO Implement delete all endpoint.
-	});
+	$app->delete('$1/$2/$3', '$4Router:delete');
 
 	/**
 	 * @api {delete} $1/$2/$3/:$3Id Delete $3 by ID.
@@ -146,6 +128,12 @@ snippet api
 	 * @apiSuccess {String} ok Status of response.
 	 * @apiSuccess {Object[]} data Empty object.
 	 */
-	$app->delete('$1/$2/$3/$3Id', function($request, $response){
-		// TODO Implement delete by id endpoint.
-	});
+	$app->delete('$1/$2/$3/$3Id', '$4Router:deleteAll');
+# Slim PHP Router function
+snippet api_function
+	public function ${1:function_name}($request, $response, $args){
+		${2}
+	}
+# Slim PHP gather params
+snippet api_params
+	$params = $request->getParams();

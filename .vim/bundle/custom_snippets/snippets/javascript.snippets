@@ -1,0 +1,41 @@
+# Create javascript objects.
+snippet reveal
+	var ${1:name_of_class} = function(){
+		${2}
+
+		return {
+
+		}
+	}
+# Create getter and setter.
+snippet getset
+	function get${1:upper_property_name}(){
+		return ${2:lower_property_name};
+	}
+
+	function set$1(new$1){
+		$2 = new$1;
+	}
+# Mirror JSON property.
+snippet mirror
+	"${1:name_of_property}" : "$1",
+# Notify all subscribers.
+snippet notifyAll
+	/**
+	 * Notify all subscribers.
+	 */
+	function notify(){
+		${1://TODO implement function.}
+	}
+
+	/**
+	 * Subscribe to observable.
+	 */
+	function subscribe(subscriber){
+		${2:subscribers}.push(subscriber);
+	}
+# Notify as a subscriber
+snippet notify
+	function notify(${1:argument}){
+		${2://TODO implement function.}
+	}
