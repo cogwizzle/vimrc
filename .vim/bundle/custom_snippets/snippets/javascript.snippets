@@ -25,7 +25,7 @@ snippet notifyAll
 	 * Notify all subscribers.
 	 */
 	function fire(){
-		this.${1:subscribers}.forEach(function(item){
+		${1:subscribers}.forEach(function(item){
 			item.notify(${2:notification});
 		});
 	}
@@ -34,17 +34,24 @@ snippet notifyAll
 	 * Subscribe to observable.
 	 */
 	function subscribe(subscriber){
-		this.$1.push(subscriber);
+		$1.push(subscriber);
 	}
 
 	/**
-	 * Subscribe to observable.
+	 * Unsubscribe from observable.
 	 */
-	function subscribe(subscriber){
-		this.$1.push(subscriber);
+	function unsubscribe(subscriber){
+		$1 = $1.filter(
+			function(item !== subscriber){
+				return item
+			}
+		);
 	}
 # Notify as a subscriber
 snippet notify
+	/**
+	 * Notify this subscriber.
+	 */
 	function notify(${1:argument}){
 		${2://TODO implement function.}
 	}
