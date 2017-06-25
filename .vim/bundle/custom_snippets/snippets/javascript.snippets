@@ -24,15 +24,24 @@ snippet notifyAll
 	/**
 	 * Notify all subscribers.
 	 */
-	function notify(){
-		${1://TODO implement function.}
+	function fire(){
+		this.${1:subscribers}.forEach(function(item){
+			item.notify(${2:notification});
+		});
 	}
 
 	/**
 	 * Subscribe to observable.
 	 */
 	function subscribe(subscriber){
-		${2:subscribers}.push(subscriber);
+		this.$1.push(subscriber);
+	}
+
+	/**
+	 * Subscribe to observable.
+	 */
+	function subscribe(subscriber){
+		this.$1.push(subscriber);
 	}
 # Notify as a subscriber
 snippet notify
