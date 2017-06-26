@@ -137,3 +137,8 @@ snippet api_function
 # Slim PHP gather params
 snippet api_params
 	$params = $request->getParams();
+# Slim Model
+snippet slim_model
+        class Model_${1:model_name} extends RedBean_SimpleModel{
+                ${2:// TODO implement model}
+        }
