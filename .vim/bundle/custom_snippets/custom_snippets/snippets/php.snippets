@@ -1,0 +1,147 @@
+# PHP snippets.
+# @author Joseph Fehrman
+
+# API documentation
+snippet doc_api
+	/**
+	 * @api {${1:get}} ${2:/api/1.0/}
+	 * @apiName ${3:get}
+	 * @apiGroup ${4:group}
+	 *
+	 * @apiSuccess ${5:{String}} ${6:ok} ${7:Status of response.}
+	 */
+# PHPUnit TestCase
+snippet TestCase
+	use PHPUnit\Framework\TestCase;
+
+	/**
+	 * ${3:Test description.}
+	 *
+	 * @author `g:snips_author`
+	 * @since `strftime('%d %B, %Y')`
+	 */
+	class ${1:Testname} extends TestCase{
+	  /**
+	   * Before all test run.
+	   */
+	  public static function setUpBeforeClass(){
+		  
+	  }
+
+	  /**
+	   * After all test run.
+	   */
+	  public static function tearDownAfterClass(){
+		  
+		}
+
+	  /**
+	   * Before each test runs.
+	   */
+	  public function setUp(){
+	    
+	  }
+
+	  /**
+	   * After each test runs.
+	   */
+	  public function tearDown(){
+	    
+	  }
+
+	  public function test${2:FirstTest}(){
+
+	  }
+	}
+# Slim PHP API skeleton
+snippet api
+	require '${5:../vendor/autoload.php}';
+
+	$app = new \Slim\App;
+
+	/**
+	 * @api {post} $1/$2/$3 Create new $3.
+	 * @apiName Create${4:upper_case_name}
+	 * @apiGroup $4
+	 * @apiVersion $2.0
+	 *
+	 * @apiParam
+	 * 
+	 * @apiSuccess {String} ok Status of response.
+	 * @apiSuccess {Object[]} ok Newly created $3.
+	 */
+	$app->post('${1:/api}/${2:1.0}/${3:lower_case_name}', '$4Router:create');
+
+	/**
+	 * @api {get} $1/$2/$3 Get filtered $3.
+	 * @apiName GetFiltered$4
+	 * @apiGroup $4
+	 * @apiVersion $2.0
+	 * 
+	 * @apiSuccess {String} ok Status of response.
+	 * @apiSuccess {Object[]} data Retrieve filtered $3s.
+	 */
+	$app->get('$1/$2/$3', '$4Router:read');
+
+	/**
+	 * @api {get} $1/$2/$3/:$3Id Get $3 by ID.
+	 * @apiName Get$4ById
+	 * @apiGroup $4
+	 * @apiVersion $2.0
+	 *
+	 * @apiParam {Number} $3Id Unique $3 ID.
+	 * 
+	 * @apiSuccess {String} ok Status of response.
+	 * @apiSuccess {Object[]} data $4 selected by ID.
+	 */
+	$app->get('$1$2/$3/{$3Id}', '$4Router:readOne');
+
+	/**
+	 * @api {put} $1/$2/$3/:$3Id Update $3 by ID.
+	 * @apiName Update$4
+	 * @apiGroup $4
+	 * @apiVersion $2.0
+	 *
+	 * @apiParam {Number} $3Id Unique $3 ID.
+	 * 
+	 * @apiSuccess {String} ok Status of response.
+	 * @apiSuccess {Object[]} data Updated $3.
+	 */
+	$app->put('$1$2/$3/$3Id', '$4Router:update');
+
+	/**
+	 * @api {delete} $1/$2/$3 Delete all $3s.
+	 * @apiName DeleteAll$4
+	 * @apiGroup $4
+	 * @apiVersion $2.0
+	 *
+	 * @apiSuccess {String} ok Status of response.
+	 * @apiSuccess {Object[]} data Empty object.
+	 */
+	$app->delete('$1/$2/$3', '$4Router:delete');
+
+	/**
+	 * @api {delete} $1/$2/$3/:$3Id Delete $3 by ID.
+	 * @apiName Delete$4ById
+	 * @apiGroup $4
+	 * @apiVersion $2.0
+	 *
+	 * @apiParam {Number} testId Unique $3 ID.
+	 *
+	 * @apiSuccess {String} ok Status of response.
+	 * @apiSuccess {Object[]} data Empty object.
+	 */
+	$app->delete('$1/$2/$3/$3Id', '$4Router:deleteAll');
+# Slim PHP Router function
+snippet api_function
+	public function ${1:function_name}($request, $response, $args){
+		${2}
+	}
+# Slim PHP gather params
+snippet api_params
+	$params = $request->getParams();
+# Slim Model
+snippet slim_model
+        class Model_${1:model_name} extends RedBean_SimpleModel{
+                ${2:// TODO implement model}
+        }
