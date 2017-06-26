@@ -55,3 +55,30 @@ snippet notify
 	function notify(${1:argument}){
 		${2://TODO implement function.}
 	}
+# Singleton pattern.
+snippet singleton
+	/**
+	 * ${2:class_description}
+	 *
+	 * @see singleton
+	 */
+	var ${1:class_name} = (function(){
+		var instance;
+
+		/**
+		 * Get singleton instance of object.
+		 */
+		function getInstance(){
+			if(!instance){
+
+				// Actual object implementation.
+				instance = (function(){
+
+					return {
+
+					};
+				})();
+			}
+			return instance;
+		}
+	})();
