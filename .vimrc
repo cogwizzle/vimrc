@@ -45,6 +45,7 @@ hi Comment ctermfg=lightblue
 
 " ============= Custom commands ==============
 command Test execute "!phpunit %"
+command Snips execute "silent !cat ~/.vim/bundle/custom_snippets/snippets/* >> ~/.vim/out.snippets" | split ~/.vim/out.snippets | execute "silent !rm ~/.vim/out.snippets"
 
 " ============= Snippets config ==============
 let g:snips_author='Joseph Fehrman'
