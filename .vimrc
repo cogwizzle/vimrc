@@ -12,6 +12,9 @@ set smarttab
 set mouse=
 set background=dark
 filetype plugin on
+let g:php_folding=2
+set foldmethod=syntax
+set foldlevelstart=4
 set omnifunc=syntaxcomplete#Complete
 :set completeopt-=preview
 
