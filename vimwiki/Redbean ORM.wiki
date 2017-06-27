@@ -1,0 +1,42 @@
+= Redbean =
+== Overview ==
+Redbean is a really fast ORM that is used for small to medium sized projects in PHP.  It is a little bit quirky, but it is fast and easy to learn.
+
+== Quirks ==
+=== Models ===
+Redbean Models don't exactly focus on the structure of the object rather what is required for the bean to be complete.  The update function is where you can reject a bean if it does not contain the required information.
+
+Example of udpate function.
+{{{
+  public function update(){
+    if(!isset($this->bean->property)){
+      throw new Exception("Property must be set");
+    }
+  }
+}}}
+
+Models can also be used to automatically append relationships to a bean.  This is done through the open function.
+
+Example of the open function.
+{{{
+  public function open(){
+    $this->bean->sharedProperty;
+    $this->bean->ownAttribute;
+  }
+}}}
+
+Model definitions must extend *Redbean_SimpleModel*.
+
+=== Freeze ===
+Redbean has the ability to dynamically create database tables.  Through the freeze function Redbean can define the database as complete.
+
+{{{
+  R::freeze(true);
+}}}
+
+Freezing the database makes the queries a little bit faster.  Additionally a developer can speed up the queries a bit more by adding the schema to the Redbean instance.
+
+{{{
+  $schema = R::getDuplicationManager()->getSchema();
+  R::getDuplicationManager()->setTables($schema);
+}}}

@@ -1,0 +1,3 @@
+= Restful Apis =
+== Overview ==
+JavaScript Object Notation driven web resources that return application data to a user usually through ajax.

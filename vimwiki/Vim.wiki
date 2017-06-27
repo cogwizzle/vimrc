@@ -1,0 +1,30 @@
+= VIM =
+== Overview ==
+VIM is my type less do more editor.  It helps me accomplish more task faster.
+
+== Gettings Started with VIM ==
+If you are new to VIM you should run through vimtutor.  To run vimtutor type 'vimtutor' inside a linux terminal window.
+
+== My Vim's Features ==
+Through plugins and customization of the .vimrc flie I have added functionality to the base of VIM.
+
+=== Autocomplete ===
+There are tree types of auto complete being used by your vim setup.  Snippets, Emmet, and Omnicomplete.
+
+* To use Snippets enter the snippet name and press the tab key.
+* To use Emmet enter the HTML short cut and use the key combination 'ctrl+y',','.  To see a full list of snips use the ':Snips' command.
+* To use Omnicomplete start typing the word then hit 'ctrl+x','ctrl+o'.
+  * Note you can also use Omnicomplete file with 'ctrl+x','ctrl+f'.
+
+=== File Navigation ===
+File navigation can be turned on and off by using 'ctrl+n'.
+
+=== Sessions ===
+Save session
+{{{
+  :msk ~/.vim/sessions/session_name.vim
+}}}
+Load session
+{{{
+  vim -S ~/.vim/sessions/session_name.vim
+}}}

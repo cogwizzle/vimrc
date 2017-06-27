@@ -1,0 +1,9 @@
+= Slim MVC Tips and Tricks =
+== Overview ==
+Slim MVC is a quick and easy way to set up [[RESTful Apis]].
+
+== Controller Files ==
+When building out [[RESTful Apis]] with Slim it is a good idea to use Controller files.  An abstract version of a controller has been defined @ https://github.com/jfehrman/php_common/tree/master/slim/storage.  This will allow you to automatically create all of the CRUD operation endpoints for any given object quickly.
+
+== Middleware ==
+Slim has functions that is run on endpoints before or after the response.  This function is called middleware.  Middlware can be somewhat complex in practice.  Instead of explaining extensively what Middelware does a link will be provided.  https://www.slimframework.com/docs/concepts/middleware.html.
