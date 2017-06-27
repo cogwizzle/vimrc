@@ -12,11 +12,14 @@ set smarttab
 set mouse=
 set background=dark
 filetype plugin on
+" Folding
 let g:php_folding=2
 set foldmethod=syntax
 set foldlevelstart=4
+" Autocomplete
 set omnifunc=syntaxcomplete#Complete
 :set completeopt-=preview
+" Splash screen
 
 " ================ Nerd Tree ==================
 " Start nerd tree
@@ -49,6 +52,7 @@ hi Comment ctermfg=lightblue
 " ============= Custom commands ==============
 command Test execute "!phpunit %"
 command Snips new|read !cat ~/.vim/bundle/custom_snippets/snippets/* #
+command CustomHelp tabnew|read !cat ~/.vim/splash.txt
 
 " ============= Snippets config ==============
 let g:snips_author='Joseph Fehrman'
