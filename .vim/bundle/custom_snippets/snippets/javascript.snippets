@@ -81,4 +81,13 @@ snippet singleton
 			}
 			return instance;
 		}
+
+		return {
+			"getInstance" : getInstance,
+		}
 	})();
+# Settimeout
+snippet setTimeout
+	setTimeout(function(){
+		${2:}
+	}, ${1:1000});
