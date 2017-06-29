@@ -12,6 +12,7 @@ set smarttab
 set mouse=
 set background=dark
 filetype plugin on
+filetype plugin indent on
 " Folding
 let g:php_folding=2
 set foldmethod=syntax
