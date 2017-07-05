@@ -99,3 +99,10 @@ snippet fetch_json
 		}).then(function(json){
 			${3:// TODO implement promise.}
 		});
+# riot fab
+snippet riot_fab
+	riot.mount("${1:#anchor}", "floating-action-button", {
+		"press" : ${2:function(){}},
+		"background_color" : "#4CAF50",
+		"icon_class" : "${3:icon}",
+	});
