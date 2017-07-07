@@ -11,6 +11,7 @@ set expandtab
 set smarttab
 set mouse=
 set background=dark
+set hlsearch
 filetype plugin on
 filetype plugin indent on
 " Folding
@@ -20,7 +21,6 @@ set foldlevelstart=4
 " Autocomplete
 set omnifunc=syntaxcomplete#Complete
 :set completeopt-=preview
-" Splash screen
 
 " ================ Nerd Tree ==================
 " Start nerd tree
@@ -56,4 +56,4 @@ command Snips new|read !cat ~/.vim/bundle/custom_snippets/snippets/* #
 command CustomHelp tabnew|read !cat ~/.vim/splash.txt
 
 " ============= Snippets config ==============
-let g:snips_author='Joseph Fehrman'
+let g:snips_author='1r0nm@n'
