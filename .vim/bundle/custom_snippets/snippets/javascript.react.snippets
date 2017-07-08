@@ -1,0 +1,45 @@
+# Import react.
+snippet react_import
+	import React from 'react';
+# Create new component.
+snippet react_create
+	export default class ${1:ComponentName} extends React.Component{
+		
+		/**
+		 * Default constructor.
+		 */
+		constructor(){
+			super();
+		}
+
+		/**
+		 * JSX based render function.
+		 */
+		render(){
+			${2:<div>TODO implement function</div>}
+		}
+	}
+# Before mount.
+snippet react_pre_mount
+	/**
+	 * Before component mounts.
+	 */
+	componentWillMount(){
+		${2:// TODO implement.}
+	}
+# After mount.
+snippet react_post_mount
+	/**
+	 * After component mounts.
+	 */
+	componentDidMount(){
+		${2:// TODO implement.}
+	}
+# Before removed from dom.
+snippet react_remove
+	/**
+	 * Before react is removed from DOM.
+	 */
+	componentWillUnmount(){
+		${2:// TODO implement.}
+	}
