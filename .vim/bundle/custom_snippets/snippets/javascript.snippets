@@ -91,3 +91,18 @@ snippet setTimeout
 	setTimeout(function(){
 		${2:}
 	}, ${1:1000});
+# Fetch Json
+snippet fetch_json
+	fetch(${1:url}, ${2:fetchOptions})
+		.then(function(response){
+			return response.json();
+		}).then(function(json){
+			${3:// TODO implement promise.}
+		});
+# riot fab
+snippet riot_fab
+	riot.mount("${1:#anchor}", "floating-action-button", {
+		"press" : ${2:functionName},
+		"background_color" : "#4CAF50",
+		"icon_class" : "${3:icon}",
+	});
