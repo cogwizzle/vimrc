@@ -52,7 +52,7 @@ hi Comment ctermfg=lightblue
 
 " ============= Custom commands ==============
 command Test execute "!phpunit %"
-command Snips new|read !cat ~/.vim/bundle/custom_snippets/snippets/* #
+command Snips new|read !cat ~/.vim/bundle/custom_snippets/snippets/*
 command CustomHelp tabnew|read !cat ~/.vim/splash.txt
 
 " ============= Snippets config ==============
