@@ -151,3 +151,39 @@ snippet getset
 	function set$1($new$1){
 		$this->$2 = $new$1;
 	}
+# Create fluent API for a property.
+snippet fluent
+	function with${1:upper_property_name}($new$1){
+		$this->${2:lower_property_name} = $new$1;
+		return $this;
+	}
+# Create getter, setter and fluent API for property.
+snippet getsetfluent
+	/**
+	 * Accessor method for retreiving $1.
+	 *
+	 * @return $1.
+	 */
+	function get${1:upper_property_name}(){
+		return $this->${2:lower_property_name};
+	}
+
+	/**
+	 * Accessor method for setting $1.
+	 *
+	 * @param $new$1 $1 to be set to this ${3:object}.
+	 */
+	function set$1($new$1){
+		$this->$2 = $new$1;
+	}
+
+	/**
+	 * Fluent API method for setting $1.
+	 *
+	 * @param $new$1 $1 to be set to this $3.
+	 * @return $1.
+	 */
+	function with$1($new$1){
+		$this->$2 = $new$1;
+		return $this;
+	}
