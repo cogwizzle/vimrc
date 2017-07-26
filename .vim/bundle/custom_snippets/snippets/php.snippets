@@ -139,6 +139,15 @@ snippet api_params
 	$params = $request->getParams();
 # Slim Model
 snippet slim_model
-        class Model_${1:model_name} extends RedBean_SimpleModel{
-                ${2:// TODO implement model}
-        }
+	class Model_${1:model_name} extends RedBean_SimpleModel{
+	  ${2:// TODO implement model}
+	}
+# Create getter and setter.
+snippet getset
+	function get${1:upper_property_name}(){
+		return $this->${2:lower_property_name};
+	}
+
+	function set$1($new$1){
+		this->$2 = $new$1;
+	}
