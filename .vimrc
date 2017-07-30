@@ -56,4 +56,4 @@ command Snips new|read !cat ~/.vim/bundle/custom_snippets/snippets/*
 command CustomHelp tabnew|read !cat ~/.vim/splash.txt
 
 " ============= Snippets config ==============
-let g:snips_author='1r0nm@n'
+let g:snips_author='Joseph Fehrman'
