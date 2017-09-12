@@ -28,3 +28,8 @@ Load session
 {{{
   vim -S ~/.vim/sessions/session_name.vim
 }}}
+
+=== GIT integration (Fugitive) ===
+:Gstatus - See what changes happened.
+  You can add files in this window by hittin gthe '-' key.
+:Gcommit - Commit the changes.
