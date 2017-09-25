@@ -57,3 +57,6 @@ command CustomHelp tabnew|read !cat ~/.vim/splash.txt
 
 " ============= Snippets config ==============
 let g:snips_author='Joseph Fehrman'
+
+" ============= Autoformat ===================
+autocmd FileType js ClangFormatAutoEnable
