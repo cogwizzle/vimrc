@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/vim-clang-format"]
 	path = .vim/bundle/vim-clang-format
 	url = https://github.com/rhysd/vim-clang-format
+[submodule ".vim/bundle/jshint2.vim"]
+	path = .vim/bundle/jshint2.vim
+	url = https://github.com/shutnik/jshint2.vim
