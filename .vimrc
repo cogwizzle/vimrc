@@ -62,6 +62,10 @@ let g:snips_author='Joseph Fehrman'
 autocmd FileType js ClangFormatAutoEnable
 let g:clang_format#auto_format=1
 
+" =========== Enable Mouse ===================
+set mouse=a
+let g:NERDTreeMouseMode=3 
+
 " ============= JS Hint ======================
 let jshint2_read = 0 
 let jshint2_save = 1
