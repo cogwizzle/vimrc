@@ -21,29 +21,9 @@ set foldlevelstart=4
 " Autocomplete
 set omnifunc=syntaxcomplete#Complete
 :set completeopt-=preview
-
-" ================ Nerd Tree ==================
-" Start nerd tree
-autocmd vimenter * NERDTree
-" Start nerd tree in other tab
-autocmd vimenter * wincmd p
-" Set up nerd tree tabs
-let g:nerdtree_tabs_open_on_console_startup=1
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-m> :NERDTreeFocus<CR>
-
-" =============== airline-vim =================
-let g:airline#extensions#tabline#enabled = 1
-set laststatus=2
-" let g:airline_powerline_fonts = 1
-" g:airline symbols
-let g:airline_theme='base16color'
-
 au BufRead,BufNewFile *.tag set filetype=html
-
-" ============= PHP QA =======================
-let g:phpqa_codesniffer_autorun = 0
-let g:phpqa_messdetector_autorun = 0
+" Enable mouse
+set mouse=a
 
 " ============= Compatability ================
 set encoding=utf-8
@@ -55,22 +35,10 @@ command Test execute "!phpunit %"
 command Snips new|read !cat ~/.vim/bundle/custom_snippets/snippets/*
 command CustomHelp tabnew|read !cat ~/.vim/splash.txt
 
-" ============= Snippets config ==============
-let g:snips_author='Joseph Fehrman'
-
-" ============= Autoformat ===================
-autocmd FileType js ClangFormatAutoEnable
-let g:clang_format#auto_format=1
-
-" =========== Enable Mouse ===================
-set mouse=a
-let g:NERDTreeMouseMode=3 
-
-" ============= JS Hint ======================
-let jshint2_read = 0 
-let jshint2_save = 1
-let jshint2_close = 0
-let jshint2_confirm = 0
-let jshint2_color = 1
-let jshint2_min_height = 3
-let jshint2_max_height = 12
+" ========== Other Config Sources =============
+source ~/.vim/config/NerdTree.vim
+source ~/.vim/config/Airline.vim
+source ~/.vim/config/PHPQA.vim
+source ~/.vim/config/Snippets.vim
+source ~/.vim/config/Clang.vim
+source ~/.vim/config/Jshint.vim
