@@ -41,3 +41,4 @@ source ~/.vim/config/Airline.vim
 source ~/.vim/config/PHPQA.vim
 source ~/.vim/config/Snippets.vim
 source ~/.vim/config/Clang.vim
+source ~/.vim/config/Syntastic.vim
