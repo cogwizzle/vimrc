@@ -3,21 +3,21 @@ snippet react_import
 	import React from 'react';
 # Create new component.
 snippet react_create
-	export default class ${1:ComponentName} extends React.Component{
+	export default class ${1:ComponentName} extends React.Component {
 		
 		/**
 		 * Default constructor.
 		 *
 		 * @param {Object[]} props Tag properties.
 		 */
-		constructor(props){
+		constructor(props) {
 			super(props);
 		}
 
 		/**
 		 * JSX based render function.
 		 */
-		render(){
+		render() {
 			${2:<div>TODO implement function</div>}
 		}
 	}
@@ -26,7 +26,7 @@ snippet react_pre_mount
 	/**
 	 * Before component mounts.
 	 */
-	componentWillMount(){
+	componentWillMount() {
 		${2:// TODO implement.}
 	}
 # After mount.
@@ -34,7 +34,7 @@ snippet react_post_mount
 	/**
 	 * After component mounts.
 	 */
-	componentDidMount(){
+	componentDidMount() {
 		${2:// TODO implement.}
 	}
 # Before removed from dom.
@@ -42,6 +42,6 @@ snippet react_remove
 	/**
 	 * Before react is removed from DOM.
 	 */
-	componentWillUnmount(){
+	componentWillUnmount() {
 		${2:// TODO implement.}
 	}
