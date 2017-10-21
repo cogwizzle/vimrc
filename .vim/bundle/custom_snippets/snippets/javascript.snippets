@@ -7,6 +7,25 @@ snippet reveal
 
 		}
 	}
+# Create getter and setter in ES6.
+snippet es6_getset
+	/**
+	 * Get the ${1:lowercase_name_of_property} of ${2:name_of_class}.
+	 *
+	 * @return {${3:type_of_property}} $1 of $2.
+	 */
+	get $1() {
+		return this._$1;
+	}
+
+	/**
+	 * Set the $1 of $2.
+	 *
+	 * @param {$3} value $1 of $2.
+	 */
+	set $1(value) {
+		this._$1 = value;
+	}
 # Create getter and setter.
 snippet getset
 	function get${1:upper_property_name}(){
@@ -106,3 +125,20 @@ snippet riot_fab
 		"background_color" : "#4CAF50",
 		"icon_class" : "${3:icon}",
 	});
+#es6 Param
+snippet es6_param
+	@param {${1:type_of_property}} ${2:property_name} ${3:description}
+#es6 Class defnintion
+snippet	es6_class
+	/**
+	 * Represents $1.
+	 */
+	export default class ${1:class_name} {
+	
+		/**
+		 * Default constructor.
+		 */
+		constructor() {
+			super();
+		}
+	}
