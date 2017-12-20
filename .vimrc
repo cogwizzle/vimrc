@@ -24,6 +24,8 @@ set omnifunc=syntaxcomplete#Complete
 au BufRead,BufNewFile *.tag set filetype=html
 " Enable mouse
 set mouse=a
+" Set column reminder 81
+set colorcolumn=81
 
 " ============= Compatability ================
 set encoding=utf-8
