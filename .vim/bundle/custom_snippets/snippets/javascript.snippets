@@ -7,6 +7,9 @@ snippet reveal
 
 		}
 	}
+# Log a variable.
+snippet logVar
+	console.log('$1: ', ${1:var_name});
 # Create getter and setter in ES6.
 snippet es6_getset
 	/**
@@ -141,4 +144,16 @@ snippet	es6_class
 		constructor() {
 			super();
 		}
+	}
+#es6 With for builders
+snippet es6_with
+	/**
+	 * Set the ${1:lower_property} property.
+	 *
+	 * @param new${2:capital_property} {${3:type}} $1.
+	 * return this.
+	 */
+	with$2(new$2) {
+		this.$1 = new$2;
+		return this;
 	}

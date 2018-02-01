@@ -1,0 +1,13 @@
+# Redux Reducers
+snippet redux_reducer
+	function ${1:reducer_name}(state = {}, action) {
+		switch (action.type) {
+			case '${2:first_case}':
+
+				return {};
+			default:
+				return state;
+		}
+	}
+
+	module.exports = $1;
