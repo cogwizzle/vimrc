@@ -64,6 +64,3 @@
 [submodule ".vim/bundle/VimCompletesMe"]
 	path = .vim/bundle/VimCompletesMe
 	url = git://github.com/ajh17/VimCompletesMe.git
-[submodule ".vim/bundle/ejs-syntax"]
-	path = .vim/bundle/ejs-syntax
-	url = https://github.com/nikvdp/ejs-syntax
