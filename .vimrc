@@ -45,3 +45,5 @@ source ~/.vim/config/Snippets.vim
 source ~/.vim/config/Clang.vim
 source ~/.vim/config/Syntastic.vim
 source ~/.vim/config/VimCompletesMe.vim
+
+au BufNewFile,BufRead *.ejs set filetype=html
