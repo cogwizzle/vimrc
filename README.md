@@ -9,3 +9,6 @@ To use autocomplete use ctrl+x,ctrl+o
 Minimize nerdtree ctrl+n
 
 Swith to nerdtree ctrl+m
+
+## Install
+`wget https://raw.githubusercontent.com/jfehrman/vimrc/master/setup.sh && bash ./setup.sh`
