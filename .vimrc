@@ -1,13 +1,17 @@
 " ===============  Pathogen setup.=============
 set nocompatible
+set noerrorbells
 execute pathogen#infect()
 
 " =============== My Stuff ====================
 syntax on
+set incsearch
 set tabstop=2
-set relativenumber
+set nu rnu
 set shiftwidth=2
 set expandtab
+set smartindent
+set nowrap
 set smarttab
 set mouse=
 set background=dark
@@ -20,7 +24,7 @@ set foldmethod=syntax
 set foldlevelstart=4
 " Autocomplete
 set omnifunc=syntaxcomplete#Complete
-:set completeopt-=preview
+set completeopt-=preview
 au BufRead,BufNewFile *.tag set filetype=html
 " Enable mouse
 set mouse=a
